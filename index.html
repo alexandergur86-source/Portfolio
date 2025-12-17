@@ -14,25 +14,86 @@
     <section class="header">
         <img src="./imges/ag logo.png" alt="logo" />
         <nav class="navbar">
-            <a href="#home">Home</a>
+            <a href="index.html">Home</a>
             <a href="#about">About</a>
-            <a href="#services">Projects</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
         <div id="menu">
-            <i class="fa-solid fa-bars" onclick="changeIcon(this)"><i><div>
+            <i class="fa-solid fa-bars" onclick="changeIcon(this)"></i>
+        </div>
     </section>
-    
+
+    <section class="section-about">
+        <div id="about">
+            <h1>About Me</h1>
+            <p>
+                I am an aspiring Full-Stack Developer currently learning modern web technologies and building practical
+                projects to strengthen my skills. I enjoy working on both frontend and backend, creating user-friendly
+                interfaces supported by reliable server-side logic.
+
+                I focus on clean code, thoughtful architecture, and continuous growth. I learn quickly, enjoy solving
+                complex problems, and strive to deliver solutions that provide real value.
+            </p>
+            <img src="./imges/codes-logo.png" alt="codes-logo">
+        </div>
+    </section>
+
+    <section class="section-projects">
+        <div id="projects">
+            <h1>My Projects</h1>
+            <div class="project-list">
+                <div class="project-item">
+                    <h2>Project 1: Portfolio Website</h2>
+                    <p>A personal portfolio website showcasing my skills, projects, and contact information.</p>
+                </div>
+                <div class="project-item">
+                    <h2>Project 2: Task Manager App</h2>
+                    <p>A web application to manage daily tasks with features like adding, editing, and deleting tasks.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <button id="toTopBtn">↑</button>
+    <footer>
+        <img src="./imges/ag logo.png" alt="logo" />
+        <div id="contact">
+            <h1>Contact Me</h1>
+            <p>Alexander Gurevich</p>
+            <p>Email: alexander.gur86@gmail.com</p>
+        </div>
+
+    </footer>
+
     <script>
         let navbar = document.querySelector(".header .navbar");
         let menu = document.querySelector("#menu");
         menu.onclick = () => {
             navbar.classList.toggle("active");
         };
-        let changeIcon = function(icon) {
+        let changeIcon = function (icon) {
             icon.classList.toggle("fa-bars");
             icon.classList.toggle("fa-xmark");
         };
+
+        const btn = document.getElementById('toTopBtn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+
+        btn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 
