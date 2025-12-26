@@ -15,7 +15,7 @@
   --black: #000000;
   --hover: rgb(216, 215, 215);
   --border: 1rem solid rgba(0, 0, 0, 0.1);
-  --box-shadow: 0 0.5rem 1rem #c27923(248, 232, 12, 0.5);
+  --box-shadow: 0 0.5rem 1rem #e0dfdd(248, 232, 12, 0.5);
 }
 
 html {
